@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang = "en">  <!–– language check you can perform ––>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width">                                                                                        <!–– necessary to make the website responsive ––>
+        <title>Portfolio Ontwerp & Code - Niels Vanwingh</title>
+        <meta name="description" content="Digital Design, Niels Vanwingh, Portfolio">              <!–– this part will be used in SEM, result of content strategy workshops ––>
+        <meta name="author" content="Niels"> 
+        <link rel="stylesheet" media="(min-width: 870px)" href="styles/content_style.css">    
+        <link rel="stylesheet" media="(min-width: 520px) and (max-width: 869px)" href="styles/content_medium_style.css"> 
+        <link rel="stylesheet" media="(max-width: 519px)" href="styles/content_small_style.css"> 
+        <link rel="stylesheet" href="https://use.typekit.net/ooo6jby.css">                                                                                   <!–– make sure this refers to the right css sheet ––>
+    </head>
+    
+    <body onresize="resizeContentScreen()" id="body">
+        
+        <header id="header">         
+            <div id="logo_container">
+                <img id="logo_icon" src="Icons/logo_2two.png" onmouseover="hoverLogo()" onmouseout="dehoverLogo()" onclick="refreshPage()">    
+                <svg id="logo_svg">
+                        <line id="logo_line" x1="0" y1="0" x2="200" y2="0" style="stroke:white;stroke-width:10" />
+                    </svg>
+            </div>
+
+            <div id="right_side_header"></div>
+
+        </header>
+
+    
+        <div id="right_side_body"></div>
+
+
+        <div id="page_end"></div>
+
+
+        <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/6.4.0/firebase-app.js"></script>
+
+        <!-- Firebase Products to use  -->
+        <script src="https://www.gstatic.com/firebasejs/6.4.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.4.0/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-storage.js"></script>
+
+        <!-- Flamelink core SDK  -->
+        <script src="//cdn.jsdelivr.net/npm/flamelink@next/flamelink-app.js"></script>
+
+        <!-- // The following are all optional depending on your use case -->
+        <script src="//cdn.jsdelivr.net/npm/flamelink@next/flamelink-content-cf.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/flamelink@next/flamelink-navigation-cf.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/flamelink@next/flamelink-storage-cf.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/flamelink@next/flamelink-settings-cf.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/flamelink@next/flamelink-users-cf.js"></script>
+
+        <!-- velocity dependencies motion design -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.ui.min.js"></script>
+        <!-- <script src="https://julian.com/research/velocity/vmd.min.js"></script> -->
+
+        <script src="js/portfolio_script.js"></script>
+        <script src="js/content_script.js"></script>
+
+    </body>
+    </html>
+
+    
