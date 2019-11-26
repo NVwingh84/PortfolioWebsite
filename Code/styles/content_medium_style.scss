@@ -1,0 +1,345 @@
+// font functions 
+@mixin fat_frank {
+    font-family: fatfrank, sans-serif;
+    font-weight: 400;
+    font-style: normal;  
+}
+
+@mixin facit_font {
+    font-family: jaf-facitweb, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+// some colours in variables for when you would like to include color change functionality  
+$background_color: black;
+$border_color: white;
+$brand_color: #00BBC9;
+$secbrand_color: #8ABFC3;
+
+
+html {
+    /* avoiding stairstep lines that mess up the UI, always use!! */
+    -webkit-font-smoothing: antialiased;
+    height: 100%;
+    width: 100%;
+  }
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: $background_color;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+body::-webkit-scrollbar{
+    width: 0;
+}
+
+// HEADER STYLING 
+header{
+    background-color: $background_color;
+    height: 110px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 6;
+}
+
+#logo_container{
+    position: absolute;
+    width: 350px;
+    height: 150px;
+    margin-left: 20px;
+    margin-top: 10px;
+    z-index: 16;
+}
+
+#logo_icon{
+    margin-top: -8%;
+    height: 125px;
+}
+
+#logo_svg{
+    margin-left: 10%;
+    margin-top: -5%;
+    height: 50px;
+    opacity: 1;
+}
+
+#right_side_header{
+    position: absolute;
+    top: 0%;
+    height: 100%;
+    right: 0%;
+    background-color: $brand_color;
+    width: 8%;
+    border-left: solid 5px $border_color;
+    text-align: center;
+    z-index: 5;
+}
+
+
+// BODY STYLING 
+#right_side_body{
+    position: fixed;
+    z-index: 4;
+    right: 0%;
+    background-image: linear-gradient($brand_color, $secbrand_color);
+    width: 8%;
+    height: 100%;  
+    border-left: solid 5px $border_color;  
+    text-align: center;
+}
+
+// ERROR SCREEN 
+#oepsie_text{
+    position: absolute;
+    @include fat_frank();   
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 80px;
+    opacity: 0;
+}
+
+#apel_text{
+    position: absolute;
+    @include fat_frank();   
+    left: 50%;
+    transform: translateX(-50%);
+    top: 43%;
+    color: white;
+    font-size: 40px;
+    opacity: 0;
+}
+
+#opnieuw_button{
+    position: absolute;
+    width: 650px;
+    height: 70px;
+    background-color: $brand_color;
+    left: 50%;
+    top: 60%;
+    transform: translateX(-50%);
+    @include fat_frank();   
+    font-size: 40px;
+    opacity: 0;
+}
+
+
+
+// DYNAMICALLY GENERATED CONTENT PROJECT 
+#proj_maintitle{
+    @include fat_frank();   
+    font-size: 35px;
+    color: white;
+    position: absolute;
+    width: 70%;
+    top: 110px;
+    left: 50%;
+    text-align: center; 
+    transform: translateX(-50%);
+    opacity: 0;
+}
+
+#proj_subtitle{
+    @include fat_frank();   
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    top: 180px;
+    left: 50%;
+    width: 70%;
+    transform: translateX(-50%);    
+    text-align: center; 
+    opacity: 0;
+}
+
+#proj_vid{
+    position: absolute;
+    top: 620px;
+    width: 400px;
+    height: 400px;
+    left: 50%;
+    transform: translateX(-50%);   
+    opacity: 0; 
+}
+
+#proj_desctitle{
+    @include fat_frank();      
+    position: absolute;
+    top: 260px;
+    width: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    line-height: 35px;   
+    color: white;
+    opacity: 0; 
+}
+
+#proj_description{
+    @include facit_font();
+    position: absolute;
+    top: 320px;
+    width: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    line-height: 30px;
+    font-size: 15px;
+    color: white;
+    opacity: 0;
+}
+
+#projcont_title{
+    @include fat_frank();   
+    font-size: 30px;   
+    position: absolute;
+    top: 1620px;
+    left: 50%;
+    width: 70%;
+    transform: translateX(-50%);  
+    color: white;  
+    text-align: left; 
+}
+
+#projcont{  
+    @include facit_font();
+    font-size: 18px;   
+    position: absolute;
+    height: fit-content;
+    width: 70%;
+    top: 1700px;
+    left: 50%;
+    line-height: 32px;
+    transform: translateX(-50%);  
+    color: white;     
+    text-align: left; 
+}
+
+
+// ALL STYLES GOING WITH IMAGE CARROUSEL 
+// image carrousel 
+#images_container{
+    position: absolute;
+    height: 320px;
+    width: 400px;
+    border: solid 10px $border_color;
+    top: 1150px;
+    left: 50%;
+    transform: translateX(-50%);    
+}
+
+#text_nextimage{
+    position: absolute;
+    color: white;
+    z-index: 75;
+    bottom: -45px;
+}
+
+#proj_imagecarr{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 4;
+}
+
+#lbut_images{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    left: -55px;
+    top: 130px;
+    z-index: 5;
+}
+
+#rbut_images{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    right: -55px;
+    top: 130px;
+    z-index: 5;
+}
+
+
+
+
+// generated bottom pane 
+#botpane_content{
+    position: absolute;
+    width: 100%;
+    height: 90px;
+    background-color: $secbrand_color;
+    border-bottom: solid $border_color 10px;
+}
+
+// terug knop 
+#terug_container{
+    position: absolute;
+    width: 130px;
+    height: 80px;
+    bottom: 0%;
+    left: 2%;
+}
+
+#terug_tekst{
+    @include fat_frank();  
+    position: absolute;
+    font-size: 30px;
+    right: 0%;
+}
+
+#svg_terug{
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-20%);
+}
+
+#terug_shader{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+
+
+
+// top knop 
+#top_container{
+    position: absolute;
+    width: 80px;
+    height: 100px;
+    bottom: -7%;
+    left: 35%;
+}
+
+#top_tekst{
+    @include fat_frank();  
+    position: absolute;
+    font-size: 30px;
+    bottom: -10%;
+    left: 50%;
+    transform: translateX(-50%);    
+}
+
+#svg_top{
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%); 
+}
+
+#top_shader{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+
