@@ -77,10 +77,10 @@ header{
 
 // SEARCH FUNCTIONALITY 
 #container_search{
-    position: absolute;
-    top: 0%;
+    position: fixed;
+    top: 10px;
     height: 100%;
-    right: 0%;
+    right: 20px;
     background-color: transparent;
     width: 15%;
     text-align: center;
@@ -88,18 +88,17 @@ header{
 }
 
 #looking_glass{
-    position: absolute;
-    right: 50%;
-    transform: translateX(+50%);
-    margin-top: 18px;
+    position: fixed;
+    right: 34px;
+    top: 17px;
     height: 95px;
     z-index: 2;
 }
 
 #search_bar{
-    position: absolute;
+    position: fixed;
     top: 15px;
-    right: 32%;
+    right: 59px;
     width: 0px;
     height: 67px;
     border-radius: 50px;
