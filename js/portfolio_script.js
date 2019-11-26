@@ -518,50 +518,52 @@ function dehoverLogo() {
 // on resizing the screen
 function resizeProjectScreen(){
 
-  // console.log("resize projectscreen");
+  if (y.matches || z.matches){
 
-  // save content of search bar for the first resize event 
-  let sbar = document.getElementById("search_bar");
-  if (sbar){
+    // console.log("resize projectscreen");
 
-    onresize_content = sbar.value;
-    console.log(onresize_content);
+    // close search bar if opened 
+    if (search_counter == 1){
 
+      // save content of search bar for the first resize event 
+      let sbar = document.getElementById("search_bar");
+      if (sbar){
+
+        onresize_content = sbar.value;
+        console.log(onresize_content);
+
+      }
+
+      showSearch();
+
+    }
   }
 
-  // close search bar if opened 
-  if (search_counter == 1){
-
-    showSearch();
-
-  }
-
-  // remove the bottom pane and immediately recreate it on the spot it needs to be.. 
-  var bottom_pane = document.getElementById("bottom_pane");
-  bottom_pane.parentNode.removeChild(bottom_pane);
-
-  // need to create the bottom pane on the right place, refer to offset of the last project created 
-  var bottom_pane = document.createElement("div");
-  bottom_pane.id = "bottom_pane";
-  bottom_pane.style.top = (getBodyHeight())+"px";
-  document.getElementById("projects").appendChild(bottom_pane);
-
-  // text container bottom pane 
-  var botpane_txt_container = document.createElement("div");
-  botpane_txt_container.id = "botpane_txtcont";
-  document.getElementById("bottom_pane").appendChild(botpane_txt_container);
-
-  // text in the bottom pane 
-  var botpane_text0 = document.createElement("p");
-  botpane_text0.innerHTML = "Niels Vanwingh";
-  document.getElementById("botpane_txtcont").appendChild(botpane_text0);
-  var botpane_text1 = document.createElement("p");
-  botpane_text1.innerHTML = "nielsvanwingh@yahoo.com";
-  document.getElementById("botpane_txtcont").appendChild(botpane_text1);
-  var botpane_text2 = document.createElement("p");
-  botpane_text2.innerHTML = "Digital Design & Development Projects";
-  document.getElementById("botpane_txtcont").appendChild(botpane_text2);
-
+      // remove the bottom pane and immediately recreate it on the spot it needs to be.. 
+      var bottom_pane = document.getElementById("bottom_pane");
+      bottom_pane.parentNode.removeChild(bottom_pane);
+  
+      // need to create the bottom pane on the right place, refer to offset of the last project created 
+      var bottom_pane = document.createElement("div");
+      bottom_pane.id = "bottom_pane";
+      bottom_pane.style.top = (getBodyHeight())+"px";
+      document.getElementById("projects").appendChild(bottom_pane);
+  
+      // text container bottom pane 
+      var botpane_txt_container = document.createElement("div");
+      botpane_txt_container.id = "botpane_txtcont";
+      document.getElementById("bottom_pane").appendChild(botpane_txt_container);
+  
+      // text in the bottom pane 
+      var botpane_text0 = document.createElement("p");
+      botpane_text0.innerHTML = "Niels Vanwingh";
+      document.getElementById("botpane_txtcont").appendChild(botpane_text0);
+      var botpane_text1 = document.createElement("p");
+      botpane_text1.innerHTML = "nielsvanwingh@yahoo.com";
+      document.getElementById("botpane_txtcont").appendChild(botpane_text1);
+      var botpane_text2 = document.createElement("p");
+      botpane_text2.innerHTML = "Digital Design & Development Projects";
+      document.getElementById("botpane_txtcont").appendChild(botpane_text2);
 }
 
 
